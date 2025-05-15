@@ -1,83 +1,85 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
 
 void start() { //선택창 반복
-	printf("=====공학용 계산기=====");
-	printf("1.팩토리얼");
-	printf("2.사인(sin)");
-	printf("3.거듭제곱");
-	printf("4.로그(base 10)");
-	printf("5.자연로그(base e)");
-	printf("6.제곱근");
-	printf("7.절댓값");
-	printf("8.순열(nPr)");
-	printf("9.조합(nCr)");
-	printf("0.종료");
-	printf("================");
+    printf("=====공학용 계산기=====");
+    printf("1.팩토리얼");
+    printf("2.사인(sin)");
+    printf("3.거듭제곱");
+    printf("4.로그(base 10)");
+    printf("5.자연로그(base e)");
+    printf("6.제곱근");
+    printf("7.절댓값");
+    printf("8.순열(nPr)");
+    printf("9.조합(nCr)");
+    printf("0.종료");
+    printf("================");
 }
 
 int factorial(int x) {//팩토리얼 계산
-	int j;
-	for (int i = 1;i <= x;i++)
-		j *= i;
-	return j;
+    int j;
+    for (int i = 1;i <= x;i++)
+        j *= i;
+    return j;
 }
 
 int doubletake(int x) {//거듭제곱 계산
-	x = x * x;
-	return x;
+    x = x * x;
+    return x;
 }
 int p(int x, int y) {//순열 계산
-	for (int i = x, i >= y;i -= i)
-		i *= i;
-	return i;
+    int j;
+    for (int i = x; i >= y;i -= i)
+        j *= i;
+    return j;
 }
 int c(int x, int y) {//조합 계산
-			for (int i = 1;i <= x;i++)
-				i *= i;
-			for (int j = x, j >= y;j -= j)
-				j *= j;
-			i = i / j;
-			return i;
+            int s,k;
+            for (int i = 1;i <= x;i++)
+                s *= i;
+            for (int j = x; j >= y;j -= j)
+                k *= j;
+            s = s / k;
+            return s;
 
 
 }
 
 
 int main(void) {
-	int choose;
-	double enter, result;
-	while (choose != 0) {
-		start();
-		printf("기능을 선택하세요:");//기능선택받기
-		scanf("%d", &choose);
-		//기능분해
-		if (choose == 1) {
-			printf("팩토리얼을 계산할 정수를 입력하세요:");
-			scanf("%d", &enter);
-			int result = factorial(enter);
-			printf("%d는 %d입니다.", enter, result);
-		}
-		else if (choose == 2) {
-			printf("사인을 계산할 값을 입력하세요:");
-			scanf("%lf", &enter);
-			result = double sin(enter);
-			printf("%if의 사인 값은 %if 입니다.", enter, result);
-		}
-		else if (choose == 3) {
-			printf("거듭제곱을 계산할 정수를 입력하세요:");
-			scanf("%d", &enter);
-			result = doubletake(enter);
-			printf(" %d의 거듭제곱은 %d입니다.", enter, result);
-		}
-		else if (choose == 4) {}
-		else if (choose == 5) {}
-		else if (choose == 6) {}
-		else if (choose == 7) {}
-		else if (choose == 8) {}
-		else if (choose == 9) {}
-		else if (choose == 0) {}
+    int choose;
+    double enter, result;
+    while (choose != 0) {
+        start();
+        printf("기능을 선택하세요:");//기능선택받기
+        scanf("%d", &choose);
+        //기능분해
+        if (choose == 1) {
+            printf("팩토리얼을 계산할 정수를 입력하세요:");
+            scanf("%d", &enter);
+            int result = factorial(enter);
+            printf("%d는 %d입니다.", enter, result);
+        }
+        else if (choose == 2) {
+            printf("사인을 계산할 값을 입력하세요:");
+            scanf("%lf", &enter);
+            result = sin(enter);
+            printf("%if의 사인 값은 %if 입니다.", enter, result);
+        }
+        else if (choose == 3) {
+            printf("거듭제곱을 계산할 정수를 입력하세요:");
+            scanf("%d", &enter);
+            result = doubletake(enter);
+            printf(" %d의 거듭제곱은 %d입니다.", enter, result);
+        }
+        else if (choose == 4) {}
+        else if (choose == 5) {}
+        else if (choose == 6) {}
+        else if (choose == 7) {}
+        else if (choose == 8) {}
+        else if (choose == 9) {}
+        else if (choose == 0) {}
 
-	 }
+     }
 }
