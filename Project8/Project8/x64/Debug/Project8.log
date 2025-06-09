@@ -1,0 +1,5 @@
+﻿  Exercise_2.c
+  Exercise_3.c
+  코드를 생성하고 있습니다...
+C:\Users\DS\Desktop\Project8\Project8\Exercise_3.c(11,12): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Project8.vcxproj -> C:\Users\DS\Desktop\Project8\x64\Debug\Project8.exe
